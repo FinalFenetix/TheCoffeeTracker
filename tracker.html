@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Coffee Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top-nav">
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tracker.html">Coffee Tracker</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li class="dropdown">
+         <!-- <a href="#">Contact ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Discord</a></li>-->
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+    <h1 id="float">The <br><span class="coffee">Coffee</span> Tracker</h1>
+
+    <div class="card">
+        <h2>What I'm working on now🗿</h2>
+        <p>The <span class="coffee">Coffee</span> tracker!!!!</p>
+    </div>
+
+    <div class="card">
+        <h2>Weekly goals☕</h2>
+        <p>Add functionality to coffee tracker</p>
+        <p>Add second character to pixel fighter 5</p>
+        <p>Smoke my dad in Age of Empires</p>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-text">Progress</div>
+        <div class="progress-fill" style="--progress-width: 60%"></div>
+    </div>
+
+    <script>
+        const progressBar = document.querySelector('.progress-fill');
+      
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              progressBar.style.animation = 'fillBar 1.2s ease-out forwards';
+            }
+          });
+        }, {
+          threshold: 0.5 // Adjust for how visible it needs to be
+        });
+      
+        observer.observe(document.querySelector('.progress-bar'));
+    </script>
+      
+
+</body>
+</html>
